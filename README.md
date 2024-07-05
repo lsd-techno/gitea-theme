@@ -14,10 +14,10 @@ Any updates, comments, or pull requests are appreciated. At the time of the firs
    On the left panel, click `Configuration -> Summary` and look at the end of `Server Configuration`, e.g., `/var/lib/gitea/custom`.
 
 3. **Create Folder Structure on Gitea Host Machine**  
-   Create the `assets/css` folder structure and then change the owner and group to `git`.
+   Create the `public/assets/css` folder structure and then change the owner and group to `git`.
 
 4. **Copy Updated CSS File**  
-   Copy `theme-arc-green-updated.css` into the newly created `assets/css` folder. Assign the copied file to the `git` user and group:
+   Copy `theme-arc-green-updated.css` into the newly created `public/assets/css` folder. Assign the copied file to the `git` user and group:
    ```bash
    sudo chown git:git /var/lib/gitea/custom/assets/css/theme-arc-green-updated.css
    ```
