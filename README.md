@@ -1,6 +1,9 @@
 # Gitea Theme
 
-This should be a temporary solution until Gitea reinvents the `soft contrast, low light theme`. Any updates, comments, or pull requests are appreciated. At the time of the first publication, it is based on the new `gitea-dark-theme` with some color accents inspired by the previous `arc-green-theme`.
+This should be a temporary solution until [Gitea](https://github.com/go-gitea/gitea) reinvents the `soft contrast, low light theme`. Inspired by https://github.com/go-gitea/gitea/issues/31308.
+
+
+Any updates, comments, or pull requests are appreciated. At the time of the first publication, it is based on the new `gitea-dark-theme` with some color accents based on previous `arc-green-theme`.
 
 ## How to Install
 
