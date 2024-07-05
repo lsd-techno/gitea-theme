@@ -19,7 +19,7 @@ Any updates, comments, or pull requests are appreciated. At the time of the firs
 4. **Copy Updated CSS File**  
    Copy `theme-arc-green-updated.css` into the newly created `public/assets/css` folder. Assign the copied file to the `git` user and group:
    ```bash
-   sudo chown git:git /var/lib/gitea/custom/assets/css/theme-arc-green-updated.css
+   sudo chown git:git /var/lib/gitea/custom/public/assets/css/theme-arc-green-updated.css
    ```
 
 5. **Confirm Configuration File Path**  
