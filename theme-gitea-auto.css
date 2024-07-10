@@ -1,0 +1,2 @@
+@import "./theme-gitea-light.css" (prefers-color-scheme: light);
+@import "./theme-arc-green-updated.css" (prefers-color-scheme: dark);
