@@ -1,0 +1,20 @@
+<script>
+/* Extend CodeMirror language detection so that .bas files are highlighted
+   as VB.NET.  Gitea reads data-code-editor-config from the textarea before
+   its ES-module scripts run, so an inline script in this footer template is
+   the right hook point: inline <script> executes synchronously while
+   <script type="module"> (used by Gitea) is always deferred. */
+(function () {
+  var editors = document.querySelectorAll('textarea[data-code-editor-config]');
+  if (!editors.length) return;
+  editors.forEach(function (el) {
+    try {
+      var cfg = JSON.parse(el.getAttribute('data-code-editor-config') || '{}');
+      if (cfg.filename && /\.bas$/i.test(cfg.filename)) {
+        cfg.filename = cfg.filename.replace(/\.bas$/i, '.vb');
+        el.setAttribute('data-code-editor-config', JSON.stringify(cfg));
+      }
+    } catch (e) { /* ignore malformed JSON */ }
+  });
+}());
+</script>
