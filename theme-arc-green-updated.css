@@ -69,6 +69,7 @@
   --color-console-active-bg: #454a57;
   --color-console-menu-bg: #383c47;
   --color-console-menu-border: #5c6374;
+  --color-console-link: #969aa1;
   /* named colors */
   --color-red: #cc4848;
   --color-orange: #cc580c;
@@ -154,6 +155,8 @@
   --color-diff-removed-row-border: #634343;
   --color-diff-removed-word-bg: #6f3333;
   --color-diff-inactive: #353846;
+  --color-diff-added-fg: var(--color-green);
+  --color-diff-removed-fg: var(--color-red);
   --color-error-border: #a04141;
   --color-error-bg: #522;
   --color-error-bg-active: #744;
@@ -181,6 +184,7 @@
   --color-orange-badge-bg: #f2711c1a;
   --color-orange-badge-hover-bg: #f2711c4d;
   --color-git: #f05133;
+  --color-logo: #609926;
   /* target-based colors */
   --color-body: #2e323e;
   --color-box-header: #303340;
@@ -203,6 +207,7 @@
   --color-light-mimic-enabled: rgba(0, 0, 0, calc(40 / 255 * 222 / 255 / var(--opacity-disabled)));
   --color-light-border: #ffffff28;
   --color-hover: #ffffff19;
+  --color-hover-opaque: #434651; /* color-mix(--color-body, --color-hover) */
   --color-active: #ffffff24;
   --color-menu: #1e252e;
   --color-card: #1e252e;
@@ -212,11 +217,14 @@
   --color-button: #1e252e;
   --color-code-bg: #222733;
   --color-shadow: #00000058;
+  --color-shadow-opaque: #000000;
   --color-secondary-bg: #2a2e3a;
   --color-expand-button: #3c404d;
   --color-placeholder-text: #8a8e99;
   --color-editor-line-highlight: var(--color-primary-light-5);
+  --color-editor-selection: var(--color-primary-alpha-50);
   --color-project-board-bg: var(--color-secondary-light-2);
+  --color-project-column-bg: var(--color-secondary-light-2);
   --color-caret: var(--color-text); /* should ideally be --color-text-dark, see #15651 */
   --color-reaction-bg: #ffffff12;
   --color-reaction-hover-bg: var(--color-primary-light-4);
@@ -236,6 +244,52 @@
   --color-highlight-fg: #7a9e55;
   --color-highlight-bg: #364626;
   --color-overlay-backdrop: #080808c0;
+  --color-danger: var(--color-red);
+  --color-transparency-grid-light: #3a3e4a;
+  --color-transparency-grid-dark: #2a2e3a;
+  --color-workflow-edge-hover: #5c6374;
+  /* syntax highlighting colors — used by codeeditor.css (CM6) and chroma.css */
+  --color-syntax-keyword: #ff7540;
+  --color-syntax-bool: #649bc4;
+  --color-syntax-control: #ffaa10;
+  --color-syntax-name: #fabd2f;
+  --color-syntax-type: #ff7b72;
+  --color-syntax-number: #649bc4;
+  --color-syntax-operator: #ff7540;
+  --color-syntax-regexp: #9075cd;
+  --color-syntax-string: #b8bb26;
+  --color-syntax-comment: #777e94;
+  --color-syntax-invalid: #ff4433;
+  --color-syntax-link: var(--color-primary);
+  --color-syntax-tag: #ff7540;
+  --color-syntax-attribute: #fabd2f;
+  --color-syntax-property: #a0cc75;
+  --color-syntax-variable: #ebdbb2;
+  --color-syntax-string-special: #ffaa10;
+  --color-syntax-escape: #ff8540;
+  --color-syntax-entity: #fabd2f;
+  --color-syntax-preproc: #8ec07c;
+  --color-syntax-preproc-file: #649bc4;
+  --color-syntax-decorator: #8ec07c;
+  --color-syntax-namespace: #c9d1d9;
+  --color-syntax-name-pseudo: #fabd2f;
+  --color-syntax-comment-special: #9075cd;
+  --color-syntax-text: #c9d1d9;
+  --color-syntax-text-alt: #b6bac5;
+  --color-syntax-punctuation: #d2d4db;
+  --color-syntax-whitespace: #7f8699;
+  --color-syntax-diff-fg: #ffffff;
+  --color-syntax-deleted-bg: #5f3737;
+  --color-syntax-inserted-bg: #3a523a;
+  --color-syntax-emph: #ddee30;
+  --color-syntax-strong: #ebdbb2;
+  --color-syntax-heading: #ffaa10;
+  --color-syntax-subheading: #b8bb26;
+  --color-syntax-output: #777e94;
+  --color-syntax-prompt: #ebdbb2;
+  --color-syntax-traceback: #ff7540;
+  --color-syntax-matching-bracket-bg: #00918a48;
+  --color-syntax-nonmatching-bracket-bg: #cc484848;
   accent-color: var(--color-accent);
   color-scheme: dark;
 }
