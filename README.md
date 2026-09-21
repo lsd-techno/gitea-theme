@@ -25,17 +25,32 @@ Any updates, comments, or pull requests are appreciated. At the time of the firs
    ```
    do same for other files and folders: `theme-gitea-auto.css`, `chroma/dark.css`, `codemirror/dark.css`.
 
-5. **Confirm Configuration File Path**  
+5. **Enable `.bas` file syntax highlighting in the editor** *(optional)*  
+   `.bas` (BASIC/VBA) files are not registered in Gitea's built-in CodeMirror language list.
+   A custom footer template is provided to fix this: it patches the editor configuration
+   at page-load time so that `.bas` files are highlighted using the VB.NET language mode.
+
+   Create the `templates/custom` folder structure and copy the template:
+   ```bash
+   mkdir -p /var/lib/gitea/custom/templates/custom
+   cp templates/custom/footer.tmpl /var/lib/gitea/custom/templates/custom/footer.tmpl
+   sudo chown git:git /var/lib/gitea/custom/templates/custom/footer.tmpl
+   ```
+
+   > **Note:** If you already have a custom `footer.tmpl`, merge the `<script>` block from
+   > this file into your existing template.
+
+6. **Confirm Configuration File Path**  
    If you want to make the new theme default for the login page and new users, go back to the web interface to confirm the `Configuration File Path`, e.g., `/etc/gitea/app.ini`.
 
-6. **Make the new theme default for the login page and new users**  
+7. **Make the new theme default for the login page and new users**  
    Add or update the following section in the configuration file:
    ```ini
    [ui]
    DEFAULT_THEME = arc-green-updated
    ```
 
-7. **Restart Gitea**  
+8. **Restart Gitea**  
    Restart Gitea to apply the changes:
    ```bash
    sudo systemctl restart gitea
