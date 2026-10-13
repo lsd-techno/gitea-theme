@@ -5,7 +5,7 @@ This should be a temporary solution until [Gitea](https://github.com/go-gitea/gi
 
 Any updates, comments, or pull requests are appreciated. At the time of the first publication, it is based on the new `gitea-dark-theme` with some color accents based on previous `arc-green-theme`.
 
-***update:*** compatible with [release 1.27.3](https://github.com/go-gitea/gitea/releases/tag/v1.27.3)
+***update:*** compatible with [release 28.1.0](https://github.com/go-gitea/gitea/releases/tag/v28.1.0)
 
 ## How to Install
 
